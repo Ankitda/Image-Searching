@@ -13,7 +13,6 @@ async function searchImages(){
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`;
     const response = await fetch(url);
     const fetchedData = await response.json();
-    console.log(fetchedData);
     if(page == 1){
         searchResults.innerHTML = " ";
     }
@@ -49,7 +48,6 @@ function processData(array){
     if(page > 1 && results.length > 0){
         showMoreButton.style.display = "block";
     }
-
 
 }
 
